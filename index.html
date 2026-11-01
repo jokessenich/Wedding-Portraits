@@ -7,8 +7,8 @@
 <meta name="description" content="Ten-minute watercolor & ink flash portraits and live oil wedding paintings by Jasmin Iskandar de Caro.">
 <meta property="og:title" content="Jasmin Iskandar de Caro — Soulful Live Event Painting">
 <meta property="og:description" content="Portraits for your most memorable events.">
-<meta property="og:image" content="/portrait-pair.webp">
-<link rel="icon" href="/sig-ink.png">
+<meta property="og:image" content="portrait-hero.webp">
+<link rel="icon" href="sig-ink.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..500,0..100,0..1;1,9..144,300..500,0..100,0..1&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap">
@@ -43,17 +43,16 @@ p,h1,h2,figure{margin:0}
 
 /* hero */
 .hero{padding-top:56px;padding-bottom:144px;align-items:end;row-gap:64px}
-.hero-l{grid-column:1/span 6;grid-row:1}
+.hero-l{grid-column:2/span 10;grid-row:1}
 .hero-l h1{font-size:clamp(44px,4.6vw,68px);line-height:1.02}
 .hero-l h1 em{font-style:italic}
 .hero-l .sc{display:block;margin-bottom:28px}
 .hero-sub{margin-top:24px;font-size:21px;font-style:italic;line-height:1.45}
-.hero-who{grid-column:1/span 6;grid-row:2}
-.hero-img{grid-column:7/-1;grid-row:2}
-.hero-who .plate,.hero-img .plate{aspect-ratio:4/5}
-.hero-r{grid-column:8/span 5;grid-row:1;padding-bottom:6px}
-.hero-r p{font-size:19px}
-.hero-r .go{margin-top:28px;font-size:19px}
+.hero-who{grid-column:2/span 5;grid-row:2}
+.hero-img{grid-column:7/span 5;grid-row:2}
+.hero-who .plate,.hero-img .plate{aspect-ratio:2/3}
+.hero-note{grid-column:2/span 5;grid-row:3;align-self:baseline}
+.hero-go{grid-column:7/span 5;grid-row:3;align-self:baseline;margin-top:0}
 
 /* section head */
 .sec{border-top:1px solid var(--line);padding-top:72px}
@@ -98,6 +97,11 @@ textarea.f{resize:none;min-height:96px}
 .send{grid-column:1/-1;justify-self:center;margin-top:8px;background:var(--ink);color:var(--paper);border:0;min-height:52px;padding:0 44px;font:inherit;font-size:18px;font-style:italic;letter-spacing:.02em;cursor:pointer;transition:background .3s}
 .send:hover{background:var(--terra)}
 .direct{margin-top:40px;font-size:17px;color:var(--mute)}
+.form-msg{grid-column:1/-1;text-align:center;margin:0;font-size:17px;font-style:italic;color:var(--mute);min-height:1em}
+.send[disabled]{opacity:.6;cursor:default}
+.thanks{margin-top:56px;padding:48px 24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.thanks-h{font-size:36px;line-height:1.1;margin-bottom:12px}
+[hidden]{display:none!important}
 
 footer{border-top:1px solid var(--line)}
 footer .g{padding-top:40px;padding-bottom:48px;align-items:center}
@@ -116,9 +120,10 @@ footer .r{grid-column:9/-1;justify-self:end;font-size:15px;color:var(--mute);dis
   .hero{padding-top:16px;padding-bottom:96px}
   .hero{row-gap:0;align-items:start}
   .hero-l{grid-column:1/-1;grid-row:1}
-  .hero-r{grid-column:1/-1;grid-row:2;padding-bottom:0;margin-top:20px}
-  .hero-who{grid-column:1/span 6;grid-row:3;margin-top:40px}
-  .hero-img{grid-column:7/-1;grid-row:3;margin-top:40px}
+  .hero-who{grid-column:1/span 6;grid-row:2;margin-top:40px}
+  .hero-img{grid-column:7/-1;grid-row:2;margin-top:40px}
+  .hero-note{grid-column:1/-1;grid-row:3;margin-top:40px}
+  .hero-go{grid-column:1/-1;grid-row:4;margin-top:16px}
   .hero-who .cap,.hero-img .cap{font-size:13px}
   .hero-l .sc{margin-bottom:16px}
   .sec{padding-top:56px}
@@ -150,7 +155,7 @@ footer .r{grid-column:9/-1;justify-self:end;font-size:15px;color:var(--mute);dis
     <a class="nav" href="#oil">Live Oil Painting</a>
   </nav>
   <a class="c" href="#top" aria-label="Jasmin Iskandar de Caro, home">
-    <img src="/sig-ink.png" alt="" width="184" height="320">
+    <img src="sig-ink.png" alt="" width="184" height="320">
     <span class="sc">Jasmin Iskandar de Caro</span>
   </a>
   <a class="nav r" href="#inquire">Inquire</a>
@@ -164,17 +169,15 @@ footer .r{grid-column:9/-1;justify-self:end;font-size:15px;color:var(--mute);dis
       <p class="hero-sub">10-minute Flash Portraits &amp; live, large-scale oil painting</p>
     </div>
     <figure class="hero-who">
-      <div class="plate"><img src="/jasmin-painting.webp" alt="Jasmin Iskandar de Caro painting at an easel" width="739" height="924"></div>
+      <div class="plate"><img src="jasmin-painting.webp" alt="Jasmin Iskandar de Caro painting at an easel" width="616" height="924"></div>
       <figcaption class="cap">Jasmin at the easel</figcaption>
     </figure>
     <figure class="hero-img">
-      <div class="plate"><img src="/portrait-pair.webp" alt="Watercolor and ink portraits of a woman and a curly-haired man" width="690" height="1000"></div>
+      <div class="plate"><img src="portrait-hero.webp" alt="Watercolor and ink portraits of a blonde woman and a woman with a dark bob" width="720" height="1080"></div>
       <figcaption class="cap">Flash portraits · watercolor &amp; ink · ten minutes each</figcaption>
     </figure>
-    <div class="hero-r">
-      <p>Portraits for your most memorable events: weddings, birthdays and graduations.</p>
-      <p class="go"><a class="ul" href="#inquire">Inquire about a date</a></p>
-    </div>
+    <p class="hero-note">Portraits for your most memorable events: weddings, birthdays and graduations.</p>
+    <p class="hero-go"><a class="ul" href="#inquire">Inquire about a date</a></p>
   </section>
 
   <section id="flash" class="sec">
@@ -184,17 +187,17 @@ footer .r{grid-column:9/-1;justify-self:end;font-size:15px;color:var(--mute);dis
       <p>Ten-minute watercolor &amp; ink portraits, painted from photos taken on the spot or earlier in the event.</p>
     </div>
     <div class="g plates">
-      <figure><div class="plate"><img src="/portrait-duo.webp" alt="Two watercolor and ink portraits of women" width="685" height="1000"></div><figcaption class="cap">Plate i</figcaption></figure>
-      <figure><div class="plate"><img src="/portrait-four.webp" alt="Sketchbook page of four watercolor and ink portraits" width="725" height="1000"></div><figcaption class="cap">Plate ii</figcaption></figure>
-      <figure><div class="plate"><img src="/portrait-trio.webp" alt="Sketchbook page with three watercolor portraits" width="704" height="1000"></div><figcaption class="cap">Plate iii</figcaption></figure>
-      <figure><div class="plate"><img src="/flash-hero.webp" alt="Watercolor and ink portrait of a woman with her hair in a bun" width="760" height="951"></div><figcaption class="cap">Plate iv</figcaption></figure>
+      <figure><div class="plate"><img src="portrait-duo.webp" alt="Two watercolor and ink portraits of women" width="685" height="1000"></div><figcaption class="cap">Plate i</figcaption></figure>
+      <figure><div class="plate"><img src="portrait-four.webp" alt="Sketchbook page of four watercolor and ink portraits" width="725" height="1000"></div><figcaption class="cap">Plate ii</figcaption></figure>
+      <figure><div class="plate"><img src="portrait-trio.webp" alt="Sketchbook page with three watercolor portraits" width="704" height="1000"></div><figcaption class="cap">Plate iii</figcaption></figure>
+      <figure><div class="plate"><img src="flash-hero.webp" alt="Watercolor and ink portrait of a woman with her hair in a bun" width="760" height="951"></div><figcaption class="cap">Plate iv</figcaption></figure>
     </div>
   </section>
 
   <section id="oil" class="oil">
     <div class="g">
       <figure class="oil-img">
-        <div class="plate"><img src="/oil-wedding.webp" alt="Oil painting of a couple: a woman in a pale blue gown seated, a man in a cream shirt standing with his hand on her shoulder" width="743" height="1000"></div>
+        <div class="plate"><img src="oil-wedding.webp" alt="Oil painting of a couple: a woman in a pale blue gown seated, a man in a cream shirt standing with his hand on her shoulder" width="743" height="1000"></div>
         <figcaption class="cap">Oil on canvas</figcaption>
       </figure>
       <div class="oil-txt">
@@ -211,15 +214,22 @@ footer .r{grid-column:9/-1;justify-self:end;font-size:15px;color:var(--mute);dis
       <span class="num serif">III.</span>
       <h2 class="serif">Inquire</h2>
       <p class="lead">Share your date and a little about the day. Jasmin will reply with availability.</p>
-      <form action="mailto:[EMAIL]" method="post" enctype="text/plain">
+      <form id="inquiry" action="https://formspree.io/f/xpppygzw" method="POST">
+        <input type="hidden" name="_subject" value="New inquiry from the website">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
         <label>Name<input class="f" type="text" name="name" required></label>
         <label>Email<input class="f" type="email" name="email" required></label>
         <label>Occasion<input class="f" type="text" name="occasion" placeholder="Wedding, birthday…"></label>
         <label>Date<input class="f" type="text" name="date" placeholder="Month, day, year"></label>
         <label class="full">Notes<textarea class="f" name="message" rows="3" placeholder="Venue, guest count, anything else"></textarea></label>
         <button class="send" type="submit">Send inquiry</button>
+        <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
       </form>
-      <p class="direct">Or write directly: <a class="ul" href="mailto:[EMAIL]">[EMAIL]</a></p>
+      <div class="thanks" id="thanks" hidden>
+        <p class="serif thanks-h">Thank you.</p>
+        <p>Your note is on its way. Jasmin will be in touch with availability soon.</p>
+      </div>
+      <p class="direct">Or <a class="ul" href="mailto:jasmin@bosqueoscuro.com">email Jasmin directly</a></p>
     </div>
   </section>
 </main>
@@ -227,9 +237,28 @@ footer .r{grid-column:9/-1;justify-self:end;font-size:15px;color:var(--mute);dis
 <footer>
   <div class="g">
     <p class="l">© Jasmin Iskandar de Caro</p>
-    <p class="c"><img src="/sig-ink.png" alt="" width="184" height="320"></p>
-    <p class="r"><a class="ul" href="[INSTAGRAM URL]">Instagram</a><span>Watercolor · Ink · Oil</span></p>
+    <p class="c"><img src="sig-ink.png" alt="" width="184" height="320"></p>
+    <p class="r"><a class="ul" href="https://instagram.com/bosque.oscuro" target="_blank" rel="noopener">Instagram</a><span>Watercolor · Ink · Oil</span></p>
   </div>
 </footer>
+<script>
+(function(){
+  var form=document.getElementById('inquiry'); if(!form||!window.fetch) return;
+  var msg=document.getElementById('form-msg'), thanks=document.getElementById('thanks'), btn=form.querySelector('.send');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    btn.disabled=true; btn.textContent='Sending…'; msg.textContent='';
+    fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
+      .then(function(r){
+        if(r.ok){ form.hidden=true; thanks.hidden=false; thanks.scrollIntoView({behavior:'smooth',block:'center'}); return; }
+        return r.json().then(function(d){ throw new Error(d && d.errors ? d.errors.map(function(x){return x.message;}).join(' ') : 'Send failed'); });
+      })
+      .catch(function(){
+        msg.textContent='That didn\u2019t go through. Please try again, or use the email link below.';
+        btn.disabled=false; btn.textContent='Send inquiry';
+      });
+  });
+})();
+</script>
 </body>
 </html>
