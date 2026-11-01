@@ -7,7 +7,7 @@
 <meta name="description" content="Ten-minute watercolor & ink flash portraits and live oil wedding paintings by Jasmin Iskandar de Caro.">
 <meta property="og:title" content="Jasmin Iskandar de Caro — Soulful Live Event Painting">
 <meta property="og:description" content="Portraits for your most memorable events.">
-<meta property="og:image" content="/images/flash-hero.webp">
+<meta property="og:image" content="/images/portrait-pair.webp">
 <link rel="icon" href="/images/sig-ink.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
 <style>
 :root{
   --paper:#F3EBDD; --ink:#2B2420; --mute:#6A5D53; --line:rgba(43,36,32,.22);
-  --terra:#A84A2A; --olive:#4A5434; --cream:#F3EBDD;
+  --terra:#4A5434; --olive:#4A5434; --cream:#F3EBDD;
   --gutter:24px; --side:48px; --max:1296px;
 }
 *{box-sizing:border-box}
@@ -42,21 +42,23 @@ p,h1,h2,figure{margin:0}
 .top a.nav:hover{color:var(--terra)}
 
 /* hero */
-.hero{padding-top:56px;padding-bottom:144px;align-items:stretch}
-.hero-l{grid-column:1/span 3;align-self:start}
-.hero-l h1{font-size:clamp(40px,3.7vw,54px);line-height:1.04}
-.hero-l h1 em{font-style:italic;color:var(--terra)}
+.hero{padding-top:56px;padding-bottom:144px;align-items:end;row-gap:64px}
+.hero-l{grid-column:1/span 6;grid-row:1}
+.hero-l h1{font-size:clamp(44px,4.6vw,68px);line-height:1.02}
+.hero-l h1 em{font-style:italic}
 .hero-l .sc{display:block;margin-bottom:28px}
-.hero-img{grid-column:4/span 6}
-.hero-img .plate{aspect-ratio:4/5}
-.hero-r{grid-column:10/-1;align-self:end;padding-bottom:40px}
+.hero-sub{margin-top:24px;font-size:21px;font-style:italic;line-height:1.45}
+.hero-who{grid-column:1/span 6;grid-row:2}
+.hero-img{grid-column:7/-1;grid-row:2}
+.hero-who .plate,.hero-img .plate{aspect-ratio:4/5}
+.hero-r{grid-column:8/span 5;grid-row:1;padding-bottom:6px}
 .hero-r p{font-size:19px}
 .hero-r .go{margin-top:28px;font-size:19px}
 
 /* section head */
 .sec{border-top:1px solid var(--line);padding-top:72px}
 .sec-head{align-items:baseline}
-.num{font-size:17px;color:var(--terra)}
+.num{font-size:17px;color:var(--mute)}
 .sec-head .num{grid-column:1/span 1}
 .sec-head h2{grid-column:2/span 5;font-size:clamp(36px,3.4vw,48px);line-height:1.05}
 .sec-head p{grid-column:8/span 5;font-size:19px}
@@ -107,13 +109,17 @@ footer .r{grid-column:9/-1;justify-self:end;font-size:15px;color:var(--mute);dis
 @media (max-width:960px){
   :root{--side:24px}
   .top .l{display:none}
-  .top .c{grid-column:1/span 8;justify-self:start;flex-direction:row;gap:14px}
+  .top .c{grid-column:1/span 10;justify-self:start;flex-direction:row;gap:12px;white-space:nowrap}
+  .top .c .sc{letter-spacing:.1em}
   .top .c img{height:44px}
-  .top .r{grid-column:9/-1}
+  .top .r{grid-column:11/-1}
   .hero{padding-top:16px;padding-bottom:96px}
-  .hero-img{grid-column:1/-1;grid-row:1}
-  .hero-l{grid-column:1/-1;grid-row:2;margin-top:40px}
-  .hero-r{grid-column:1/-1;grid-row:3;padding-bottom:0;margin-top:20px}
+  .hero{row-gap:0;align-items:start}
+  .hero-l{grid-column:1/-1;grid-row:1}
+  .hero-r{grid-column:1/-1;grid-row:2;padding-bottom:0;margin-top:20px}
+  .hero-who{grid-column:1/span 6;grid-row:3;margin-top:40px}
+  .hero-img{grid-column:7/-1;grid-row:3;margin-top:40px}
+  .hero-who .cap,.hero-img .cap{font-size:13px}
   .hero-l .sc{margin-bottom:16px}
   .sec{padding-top:56px}
   .sec-head .num{grid-column:1/-1}
@@ -154,11 +160,16 @@ footer .r{grid-column:9/-1;justify-self:end;font-size:15px;color:var(--mute);dis
   <section class="g hero">
     <div class="hero-l">
       <span class="sc">Live event painter</span>
-      <h1 class="serif">Soulful live <em>event painting</em></h1>
+      <h1 class="serif">Live <em>event painting</em></h1>
+      <p class="hero-sub">10-minute Flash Portraits &amp; live, large-scale oil painting</p>
     </div>
+    <figure class="hero-who">
+      <div class="plate"><img src="/images/jasmin-painting.webp" alt="Jasmin Iskandar de Caro painting at an easel" width="739" height="924"></div>
+      <figcaption class="cap">Jasmin at the easel</figcaption>
+    </figure>
     <figure class="hero-img">
-      <div class="plate"><img src="/images/flash-hero.webp" alt="Watercolor and ink portrait of a woman with her hair in a bun, signed JIC" width="760" height="951"></div>
-      <figcaption class="cap">Flash portrait · watercolor &amp; ink · ten minutes</figcaption>
+      <div class="plate"><img src="/images/portrait-pair.webp" alt="Watercolor and ink portraits of a woman and a curly-haired man" width="690" height="1000"></div>
+      <figcaption class="cap">Flash portraits · watercolor &amp; ink · ten minutes each</figcaption>
     </figure>
     <div class="hero-r">
       <p>Portraits for your most memorable events: weddings, birthdays and graduations.</p>
@@ -176,7 +187,7 @@ footer .r{grid-column:9/-1;justify-self:end;font-size:15px;color:var(--mute);dis
       <figure><div class="plate"><img src="/images/portrait-duo.webp" alt="Two watercolor and ink portraits of women" width="685" height="1000"></div><figcaption class="cap">Plate i</figcaption></figure>
       <figure><div class="plate"><img src="/images/portrait-four.webp" alt="Sketchbook page of four watercolor and ink portraits" width="725" height="1000"></div><figcaption class="cap">Plate ii</figcaption></figure>
       <figure><div class="plate"><img src="/images/portrait-trio.webp" alt="Sketchbook page with three watercolor portraits" width="704" height="1000"></div><figcaption class="cap">Plate iii</figcaption></figure>
-      <figure><div class="plate"><img src="/images/portrait-pair.webp" alt="Watercolor portraits of a woman and a curly-haired man" width="690" height="1000"></div><figcaption class="cap">Plate iv</figcaption></figure>
+      <figure><div class="plate"><img src="/images/flash-hero.webp" alt="Watercolor and ink portrait of a woman with her hair in a bun" width="760" height="951"></div><figcaption class="cap">Plate iv</figcaption></figure>
     </div>
   </section>
 
