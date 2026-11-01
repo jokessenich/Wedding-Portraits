@@ -6,124 +6,219 @@
 <title>Jasmin Iskandar de Caro — Soulful Live Event Painting</title>
 <meta name="description" content="Ten-minute watercolor & ink flash portraits and live oil wedding paintings by Jasmin Iskandar de Caro.">
 <meta property="og:title" content="Jasmin Iskandar de Caro — Soulful Live Event Painting">
-<meta property="og:description" content="Flash portraits and live oil wedding paintings for your most memorable events.">
+<meta property="og:description" content="Portraits for your most memorable events.">
 <meta property="og:image" content="/images/flash-hero.webp">
+<link rel="icon" href="/images/sig-ink.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..500,100,1;1,9..144,300..500,100,1&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..500,0..100,0..1;1,9..144,300..500,0..100,0..1&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap">
 <style>
-:root{--paper:#F1EADF;--ink:#2A241E;--accent:#A4482A}
+:root{
+  --paper:#F3EBDD; --ink:#2B2420; --mute:#6A5D53; --line:rgba(43,36,32,.22);
+  --terra:#A84A2A; --olive:#4A5434; --cream:#F3EBDD;
+  --gutter:24px; --side:48px; --max:1296px;
+}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;-webkit-font-smoothing:antialiased}
-a{color:var(--ink)}a:hover{color:var(--accent)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'EB Garamond',Georgia,serif;font-size:19px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 img{display:block;max-width:100%}
-.wrap{max-width:1320px;margin:0 auto;padding-left:24px;padding-right:24px}
-.disp{font-family:'TAN Twinkle','Fraunces',serif;font-variation-settings:'SOFT' 100,'WONK' 1;font-weight:300;margin:0}
-.ul{text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
-.cta{color:var(--accent);font-size:20px}
-.grain{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;opacity:.28;mix-blend-mode:multiply;z-index:5}
-header{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:baseline;padding-top:32px;padding-bottom:32px;font-size:19px}
-header nav{display:flex;flex-wrap:wrap;gap:28px}
-.hero{padding-top:72px}
-.hero h1{font-size:clamp(54px,10vw,160px);line-height:.9;letter-spacing:-.02em}
-.hero h1 em{display:inline-block;padding-left:14%}
-.sub{margin:40px 0 0;padding-left:14%;font-size:clamp(22px,2.2vw,30px);line-height:1.35;font-style:italic;max-width:30ch}
-.split{display:flex;flex-wrap:wrap;gap:48px;align-items:flex-end}
-.split .art{flex:1.5 1 420px;min-width:0}
-.split .copy{flex:1 1 300px;padding-bottom:8px}
-.copy h2{font-size:clamp(44px,6vw,88px);line-height:.95}
-.copy p.lead{margin:28px 0 0;font-size:24px;line-height:1.45;max-width:26ch}
-.copy p.go{margin:32px 0 0}
-.art img{width:100%;height:100%;object-fit:cover}
-#flash{padding-top:140px}
-#flash .art{aspect-ratio:4/5;max-height:860px}
-.wall{padding-top:160px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px;align-items:start}
-.wall figure{margin:0;aspect-ratio:3/4}
-.wall figure img{width:100%;height:100%;object-fit:cover}
-.wall figure:nth-child(2){margin-top:120px}
-.wall figure:nth-child(3){margin-top:40px}
-#oils{padding-top:180px;flex-wrap:wrap-reverse}
-#oils .art{flex:1 1 380px;max-width:600px;aspect-ratio:3/4;margin-left:auto}
-#book{max-width:860px;margin:0 auto;padding:200px 24px 160px}
-#book h2{font-size:clamp(48px,7vw,104px);line-height:.92;text-align:center}
-form{margin-top:72px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 32px}
-label{display:flex;flex-direction:column;gap:4px;font-style:italic;font-size:17px}
+a{color:inherit}
+p,h1,h2,figure{margin:0}
+.serif{font-family:'Fraunces',Georgia,serif;font-optical-sizing:auto;font-variation-settings:'SOFT' 60,'WONK' 0;font-weight:300;letter-spacing:-.01em}
+.sc{font-variant:small-caps;letter-spacing:.14em;font-size:15px;color:var(--mute)}
+.g{max-width:var(--max);margin:0 auto;padding:0 var(--side);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gutter)}
+.ul{text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/100% 1px no-repeat;padding-bottom:2px;transition:background-size .3s}
+.ul:hover{color:var(--terra)}
+.plate img{width:100%;height:100%;object-fit:cover;box-shadow:0 1px 2px rgba(43,36,32,.10),0 18px 40px -18px rgba(43,36,32,.45)}
+.cap{margin-top:16px;font-size:15px;font-style:italic;color:var(--mute);text-align:center}
+
+/* header */
+.top{padding-top:36px;padding-bottom:36px;align-items:center}
+.top .l{grid-column:1/span 4;display:flex;gap:32px}
+.top .c{grid-column:5/span 4;justify-self:center;display:flex;flex-direction:column;align-items:center;gap:10px;text-decoration:none}
+.top .c img{height:64px;width:auto}
+.top .r{grid-column:9/-1;justify-self:end}
+.top a.nav{text-decoration:none;font-size:17px}
+.top a.nav:hover{color:var(--terra)}
+
+/* hero */
+.hero{padding-top:56px;padding-bottom:144px;align-items:stretch}
+.hero-l{grid-column:1/span 3;align-self:start}
+.hero-l h1{font-size:clamp(40px,3.7vw,54px);line-height:1.04}
+.hero-l h1 em{font-style:italic;color:var(--terra)}
+.hero-l .sc{display:block;margin-bottom:28px}
+.hero-img{grid-column:4/span 6}
+.hero-img .plate{aspect-ratio:4/5}
+.hero-r{grid-column:10/-1;align-self:end;padding-bottom:40px}
+.hero-r p{font-size:19px}
+.hero-r .go{margin-top:28px;font-size:19px}
+
+/* section head */
+.sec{border-top:1px solid var(--line);padding-top:72px}
+.sec-head{align-items:baseline}
+.num{font-size:17px;color:var(--terra)}
+.sec-head .num{grid-column:1/span 1}
+.sec-head h2{grid-column:2/span 5;font-size:clamp(36px,3.4vw,48px);line-height:1.05}
+.sec-head p{grid-column:8/span 5;font-size:19px}
+
+/* plates */
+.plates{margin-top:72px;padding-bottom:144px;row-gap:56px}
+.plates figure{grid-column:span 3}
+.plates .plate{aspect-ratio:3/4}
+
+/* oil band */
+.oil{background:var(--olive);color:var(--cream)}
+.oil .g{padding-top:144px;padding-bottom:144px;align-items:center}
+.oil .num{color:#E3B26A}
+.oil-img{grid-column:2/span 5}
+.oil-img .plate{aspect-ratio:4/5}
+.oil-img .cap{color:rgba(243,235,221,.75)}
+.oil-txt{grid-column:8/span 4}
+.oil-txt .num{display:block;margin-bottom:20px}
+.oil-txt h2{font-size:clamp(36px,3.4vw,48px);line-height:1.05}
+.oil-txt p.body{margin-top:24px}
+.oil-txt .go{margin-top:32px}
+.oil-txt .ul:hover{color:#E3B26A}
+
+/* inquire */
+.inq{padding-top:144px;padding-bottom:144px}
+.inq-in{grid-column:4/span 6;text-align:center}
+.inq-in .num{display:block}
+.inq-in h2{margin-top:20px;font-size:clamp(40px,4vw,56px);line-height:1}
+.inq-in > p.lead{margin-top:20px;color:var(--mute)}
+form{margin-top:56px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px var(--gutter);text-align:left}
+label{display:flex;flex-direction:column;gap:4px;font-variant:small-caps;letter-spacing:.12em;font-size:14px;color:var(--mute)}
 .full{grid-column:1/-1}
-.f{border:none;border-bottom:1px solid var(--ink);background:transparent;padding:12px 0;min-height:48px;font:inherit;font-size:20px;color:var(--ink);width:100%;border-radius:0}
-.f:focus{outline:none;border-bottom-color:var(--accent)}
-textarea.f{resize:vertical}
-.send{background:none;border:1px solid var(--ink);border-radius:999px;padding:16px 44px;min-height:52px;font:inherit;font-size:20px;font-style:italic;color:var(--ink);cursor:pointer}
-.send:hover{background:var(--ink);color:var(--paper)}
-footer{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;font-size:16px;font-style:italic;border-top:1px solid rgba(42,36,30,.25);padding-top:32px;padding-bottom:40px}
-@media (max-width:640px){
+.f{border:0;border-bottom:1px solid var(--ink);background:transparent;padding:8px 0;min-height:44px;font:inherit;font-size:19px;letter-spacing:0;font-variant:normal;color:var(--ink);border-radius:0;width:100%}
+.f:focus{outline:none;border-bottom-color:var(--terra)}
+.f::placeholder{color:var(--mute);font-style:italic}
+textarea.f{resize:none;min-height:96px}
+.send{grid-column:1/-1;justify-self:center;margin-top:8px;background:var(--ink);color:var(--paper);border:0;min-height:52px;padding:0 44px;font:inherit;font-size:18px;font-style:italic;letter-spacing:.02em;cursor:pointer;transition:background .3s}
+.send:hover{background:var(--terra)}
+.direct{margin-top:40px;font-size:17px;color:var(--mute)}
+
+footer{border-top:1px solid var(--line)}
+footer .g{padding-top:40px;padding-bottom:48px;align-items:center}
+footer .l{grid-column:1/span 4;font-size:15px;color:var(--mute)}
+footer .c{grid-column:5/span 4;justify-self:center}
+footer .c img{height:40px;width:auto;opacity:.85}
+footer .r{grid-column:9/-1;justify-self:end;font-size:15px;color:var(--mute);display:flex;gap:24px}
+
+@media (max-width:960px){
+  :root{--side:24px}
+  .top .l{display:none}
+  .top .c{grid-column:1/span 8;justify-self:start;flex-direction:row;gap:14px}
+  .top .c img{height:44px}
+  .top .r{grid-column:9/-1}
+  .hero{padding-top:16px;padding-bottom:96px}
+  .hero-img{grid-column:1/-1;grid-row:1}
+  .hero-l{grid-column:1/-1;grid-row:2;margin-top:40px}
+  .hero-r{grid-column:1/-1;grid-row:3;padding-bottom:0;margin-top:20px}
+  .hero-l .sc{margin-bottom:16px}
+  .sec{padding-top:56px}
+  .sec-head .num{grid-column:1/-1}
+  .sec-head h2{grid-column:1/-1;margin-top:8px}
+  .sec-head p{grid-column:1/-1;margin-top:16px}
+  .plates{margin-top:48px;padding-bottom:96px;row-gap:40px}
+  .plates figure{grid-column:span 6}
+  .oil .g{padding-top:96px;padding-bottom:96px}
+  .oil-img,.oil-txt{grid-column:1/-1}
+  .oil-txt{margin-top:48px}
+  .inq{padding-top:96px;padding-bottom:96px}
+  .inq-in{grid-column:1/-1}
+  footer .l,footer .c,footer .r{grid-column:1/-1;justify-self:center;text-align:center}
+  footer .c{grid-row:1;margin-bottom:16px}
+  footer .r{margin-top:8px}
+}
+@media (max-width:560px){
   form{grid-template-columns:1fr}
-  .wall figure:nth-child(n){margin-top:0}
-  .sub,.hero h1 em{padding-left:0}
-  #flash,.wall,#oils{padding-top:96px}
-  #book{padding-top:120px}
+  .send{width:100%}
 }
 </style>
 </head>
 <body>
-<svg aria-hidden="true" width="0" height="0" style="position:absolute"><filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .16 0 0 0 0 .14 0 0 0 0 .12 0 0 0 .5 0"/></filter></svg>
-<svg class="grain" aria-hidden="true"><rect width="100%" height="100%" filter="url(#grain)"/></svg>
 
-<header class="wrap">
-  <span style="font-style:italic">Jasmin Iskandar de Caro</span>
-  <nav aria-label="Main">
-    <a class="ul" href="#flash">Flash Portraits</a>
-    <a class="ul" href="#oils">Live Painting</a>
-    <a class="ul" href="#book">Book</a>
+<header class="g top">
+  <nav class="l" aria-label="Sections">
+    <a class="nav" href="#flash">Flash Portraits</a>
+    <a class="nav" href="#oil">Live Oil Painting</a>
   </nav>
+  <a class="c" href="#top" aria-label="Jasmin Iskandar de Caro, home">
+    <img src="/images/sig-ink.png" alt="" width="184" height="320">
+    <span class="sc">Jasmin Iskandar de Caro</span>
+  </a>
+  <a class="nav r" href="#inquire">Inquire</a>
 </header>
 
-<main>
-<section class="wrap hero">
-  <h1 class="disp">Soulful live<br><em>event painting</em></h1>
-  <p class="sub">Portraits for your most memorable events</p>
-</section>
+<main id="top">
+  <section class="g hero">
+    <div class="hero-l">
+      <span class="sc">Live event painter</span>
+      <h1 class="serif">Soulful live <em>event painting</em></h1>
+    </div>
+    <figure class="hero-img">
+      <div class="plate"><img src="/images/flash-hero.webp" alt="Watercolor and ink portrait of a woman with her hair in a bun, signed JIC" width="760" height="951"></div>
+      <figcaption class="cap">Flash portrait · watercolor &amp; ink · ten minutes</figcaption>
+    </figure>
+    <div class="hero-r">
+      <p>Portraits for your most memorable events: weddings, birthdays and graduations.</p>
+      <p class="go"><a class="ul" href="#inquire">Inquire about a date</a></p>
+    </div>
+  </section>
 
-<section id="flash" class="wrap split">
-  <div class="art"><img src="/images/flash-hero.webp" alt="Watercolor and ink portrait of a woman with her hair in a bun, signed JIC" width="760" height="951"></div>
-  <div class="copy">
-    <h2 class="disp">Flash Portraits</h2>
-    <p class="lead">Ten-minute watercolor &amp; ink portraits, painted from photos taken on the spot or earlier in the event.</p>
-    <p class="go"><a class="ul cta" href="#book">Inquire about a date</a></p>
-  </div>
-</section>
+  <section id="flash" class="sec">
+    <div class="g sec-head">
+      <p class="num serif">I.</p>
+      <h2 class="serif">Flash Portraits</h2>
+      <p>Ten-minute watercolor &amp; ink portraits, painted from photos taken on the spot or earlier in the event.</p>
+    </div>
+    <div class="g plates">
+      <figure><div class="plate"><img src="/images/portrait-duo.webp" alt="Two watercolor and ink portraits of women" width="685" height="1000"></div><figcaption class="cap">Plate i</figcaption></figure>
+      <figure><div class="plate"><img src="/images/portrait-four.webp" alt="Sketchbook page of four watercolor and ink portraits" width="725" height="1000"></div><figcaption class="cap">Plate ii</figcaption></figure>
+      <figure><div class="plate"><img src="/images/portrait-trio.webp" alt="Sketchbook page with three watercolor portraits" width="704" height="1000"></div><figcaption class="cap">Plate iii</figcaption></figure>
+      <figure><div class="plate"><img src="/images/portrait-pair.webp" alt="Watercolor portraits of a woman and a curly-haired man" width="690" height="1000"></div><figcaption class="cap">Plate iv</figcaption></figure>
+    </div>
+  </section>
 
-<section class="wrap wall" aria-label="Flash portrait examples">
-  <figure><img src="/images/portrait-four.webp" alt="Sketchbook page of four watercolor and ink portraits" loading="lazy" width="725" height="1000"></figure>
-  <figure><img src="/images/portrait-duo.webp" alt="Two watercolor portraits of women, one with grey-washed hair, one golden-haired" loading="lazy" width="685" height="1000"></figure>
-  <figure><img src="/images/portrait-pair.webp" alt="Watercolor portraits of a woman and a curly-haired man" loading="lazy" width="690" height="1000"></figure>
-</section>
+  <section id="oil" class="oil">
+    <div class="g">
+      <figure class="oil-img">
+        <div class="plate"><img src="/images/oil-wedding.webp" alt="Oil painting of a couple: a woman in a pale blue gown seated, a man in a cream shirt standing with his hand on her shoulder" width="743" height="1000"></div>
+        <figcaption class="cap">Oil on canvas</figcaption>
+      </figure>
+      <div class="oil-txt">
+        <span class="num serif">II.</span>
+        <h2 class="serif">Live Oil Wedding Painting</h2>
+        <p class="body">Your wedding portrait, painted live at the event so guests can watch the moment take shape, then finished in the home studio.</p>
+        <p class="go"><a class="ul" href="#inquire">Ask about your wedding</a></p>
+      </div>
+    </div>
+  </section>
 
-<section id="oils" class="wrap split">
-  <div class="copy">
-    <h2 class="disp">Live Oil<br><em>Wedding Painting</em></h2>
-    <p class="lead">Your wedding portrait, painted live at the event so guests can watch the moment take shape, then finished in the home studio.</p>
-    <p class="go"><a class="ul cta" href="#book">Ask about your wedding</a></p>
-  </div>
-  <div class="art"><img src="/images/oil-wedding.webp" alt="Oil painting of a couple: a woman in a pale blue gown seated, a man in a cream shirt standing with his hand on her shoulder" loading="lazy" width="743" height="1000"></div>
-</section>
-
-<section id="book">
-  <h2 class="disp">Say hello</h2>
-  <form action="mailto:[EMAIL]" method="post" enctype="text/plain">
-    <label>Name<input class="f" type="text" name="name" required></label>
-    <label>Email<input class="f" type="email" name="email" required></label>
-    <label>The occasion<input class="f" type="text" name="occasion"></label>
-    <label>Date<input class="f" type="date" name="date"></label>
-    <label class="full">A little about it<textarea class="f" name="message" rows="3"></textarea></label>
-    <div class="full" style="text-align:center;padding-top:16px"><button class="send" type="submit">Send</button></div>
-  </form>
-</section>
+  <section id="inquire" class="g inq">
+    <div class="inq-in">
+      <span class="num serif">III.</span>
+      <h2 class="serif">Inquire</h2>
+      <p class="lead">Share your date and a little about the day. Jasmin will reply with availability.</p>
+      <form action="mailto:[EMAIL]" method="post" enctype="text/plain">
+        <label>Name<input class="f" type="text" name="name" required></label>
+        <label>Email<input class="f" type="email" name="email" required></label>
+        <label>Occasion<input class="f" type="text" name="occasion" placeholder="Wedding, birthday…"></label>
+        <label>Date<input class="f" type="text" name="date" placeholder="Month, day, year"></label>
+        <label class="full">Notes<textarea class="f" name="message" rows="3" placeholder="Venue, guest count, anything else"></textarea></label>
+        <button class="send" type="submit">Send inquiry</button>
+      </form>
+      <p class="direct">Or write directly: <a class="ul" href="mailto:[EMAIL]">[EMAIL]</a></p>
+    </div>
+  </section>
 </main>
 
-<footer class="wrap">
-  <span>Watercolor · Ink · Oil</span>
-  <span><a class="ul" href="[INSTAGRAM URL]">Instagram</a> &nbsp; [EMAIL]</span>
+<footer>
+  <div class="g">
+    <p class="l">© Jasmin Iskandar de Caro</p>
+    <p class="c"><img src="/images/sig-ink.png" alt="" width="184" height="320"></p>
+    <p class="r"><a class="ul" href="[INSTAGRAM URL]">Instagram</a><span>Watercolor · Ink · Oil</span></p>
+  </div>
 </footer>
 </body>
 </html>
